@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'tugm_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Tugasmengajar lists...</b></br>
+	<div class="post">
+		{% for i in tg %}
+			<a href="{% url 'tugm_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.sks }} {{ i.tahunakademik }} {{ i.dayatampung }} {{ i.dosen }} {{ i.kelompok }} {{ i.matakuliah|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

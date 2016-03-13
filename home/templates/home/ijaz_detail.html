@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'ijaz_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Ijazah detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'ijaz_edit' pk=ij.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ ij.idx }}</p> 
+		<p>{{ ij.nomor }}</p> 
+		<p>{{ ij.nr_seri }}</p> 
+		<p>{{ ij.catatan }}</p>
+		<p>{{ ij.status }}</p> 
+		<p>{{ ij.mahasiswa|linebreaks }}</p>
+	</div>
+{% endblock %}

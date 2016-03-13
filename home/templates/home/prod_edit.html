@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'prod_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<h1>Prodi edit...</h1>
+	<form method="POST" class="post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default">Save</button>
+	</form>
+{% endblock %}

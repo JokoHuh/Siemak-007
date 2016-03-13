@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pemb_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Pembimbing detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'pemb_edit' pk=pe.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ pe.idx }}</p>		
+		<h2>{{ pe.mahasiswa }}</h2> 
+		<p>{{ pe.tanggal }}</p> 
+		<h1>{{ pe.dosen }}</h1> 
+		<p>{{ pe.status|linebreaks }}</p>
+	</div>
+{% endblock %}

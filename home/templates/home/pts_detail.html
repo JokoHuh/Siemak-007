@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pts_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>PTS detail...</b><br>
+	<div class="post">
+		{{ pts.idx }}<br>
+		<a class="btn btn-default" href="{% url 'pts_edit' pk=ps.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+		<h1>{{ ps.nama }}</h1>
+		<p>{{ ps.namapanjang }}</p>
+		<p>{{ ps.catatan }}</p>
+		<p>{{ ps.pt_id|linebreaks }}</p>
+	</div>
+{% endblock %}
+

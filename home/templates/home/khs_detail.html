@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'khs_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>KHS detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'khs_edit' pk=kh.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ kh.idx }}<br>
+		<p>{{ kh.krs }}</p>
+		<h1>{{ kh.tanggal }}</h1> 
+		<p>{{ kh.ip|linebreaks }}</p>
+	</div>
+{% endblock %}

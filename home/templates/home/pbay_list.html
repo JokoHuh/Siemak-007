@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pbay_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Pembayaran lists...</b></br>
+	<div class="post">
+		{% for i in pb %}
+			<a href="{% url 'pbay_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.tanggal }} {{ i.jenis }} {{ i.nr_validasi }} {{ i.mahasiswa|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

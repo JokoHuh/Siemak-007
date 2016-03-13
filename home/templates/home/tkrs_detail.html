@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'tkrs_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Jadwal KRS detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'tkrs_edit' pk=tk.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		{{ tk.idx }}<br>
+		<h1>{{ tk.tahunakademik }}</h1> 
+		{{ tk.tgldaftarA }}<br>
+		{{ tk.tgldaftarB }}<br>
+		{{ tk.tglubahA }}<br>
+		{{ tk.tglubahB }}<br>
+		{{ tk.tglkuliahA }}<br>
+		{{ tk.tglkuliahB }}<br>
+		<p>{{ tk.pts|linebreaks }}</p>
+	</div>
+{% endblock %}

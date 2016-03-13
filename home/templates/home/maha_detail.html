@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'maha_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Mahasiswa detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'maha_edit' pk=ma.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ ma.idx }}</p>
+		<p>{{ ma.nim }}</p>
+		<p>{{ ma.nama }}</p> 
+		<p>{{ ma.angkatan }}</p> 
+		<p>{{ ma.sks }}</p> 
+		<p>{{ ma.catatan }}</p> 
+		<p>{{ ma.konversi }}</p> 
+		<p>{{ ma.pts }}</p>
+		<p>{{ ma.prodi }}</p> 
+		<p>{{ ma.status|linebreaks }}</p>
+	</div>
+{% endblock %}

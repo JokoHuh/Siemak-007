@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'kelu_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Kelulusan detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'kelu_edit' pk=ke.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ ke.idx }}<br>
+		<h1>{{ ke.mahasiswa }}</h1> 
+		<p>{{ ke.nr_transkrip }}</p> 
+		<p>{{ ke.judul1 }}</p> 
+		<p>{{ ke.judul2 }}</p> 
+		<h2>{{ ke.ipk }}</h2> 
+		<p>{{ ke.tgl_yudisium }}</p> 
+		<p>{{ ke.wisuda }}</p> 
+		<p>{{ ke.catatan|linebreaks }}</p>
+akuliah|linebreaks }}</p>
+	</div>
+{% endblock %}

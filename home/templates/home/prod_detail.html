@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+<a href="{% url 'prod_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+<b>Prodi detail...</b><br>
+<div class="post">
+    {{ prd.idx }}<br>
+	<a class="btn btn-default" href="{% url 'prod_edit' pk=pr.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+	<h1>{{ pr.nama }}</h1>
+	<p>{{ pr.namapanjang }}</p>
+	<p>{{ pr.catatan|linebreaks }}</p>
+</div>
+{% endblock %}
+

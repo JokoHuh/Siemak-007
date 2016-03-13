@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'krs_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>KRS detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'krs_edit' pk=kr.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ kr.idx }}<br>
+		<p>{{ kr.takrs }}</p> 
+		<p>{{ kr.mahasiswa }}</p> 
+		<p>{{ kr.kelompok }}</p> 
+		<p>{{ kr.tanggal|linebreaks }}</p>
+	</div>
+{% endblock %}

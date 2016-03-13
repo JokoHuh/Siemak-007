@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'krs_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>KRS lists...</b></br>
+	<div class="post">
+		{% for i in kr %}
+			<a href="{% url 'krs_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.takrs }} {{ i.mahasiswa }} {{ i.kelompok }} {{ i.tanggal|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

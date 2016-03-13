@@ -1,0 +1,93 @@
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+}
+
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 1px 1px 1px 20px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 28pt;
+    text-decoration: none;
+	line-height: 20%;
+}
+
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #fff000;
+    font-size: 10pt;
+    text-decoration: none;
+	line-height: 90%;
+}
+
+.page-header login, .page-header login a, .page-header login a:visited, .page-header login a:active {
+    color: white;
+    font-size: 12pt;
+    text-decoration: none;
+	line-height: 90%;
+}
+
+.content {
+    margin-left: 20px;
+}
+
+h1 {
+    font-family: arial, sans-serif;
+}
+
+table.ex1 {
+    border-collapse: separate;
+    width: 16cm;
+    border: 0px solid #ddd;
+} 
+td {
+    border: 0px solid #ddd;
+}
+table.ex2 {
+    table-layout: auto;
+}
+
+.my_div1 {
+    float: left;
+    width: 0px;
+    height: 500px;
+    margin: 10px;
+}
+
+.my_div2 {
+    clear: left;
+}
+
+.my_btn {
+    float: left;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}

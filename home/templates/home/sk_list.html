@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'sk_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>SK lists...</b></br>
+	<div class="post">
+		{% for i in sk %}
+			<a href="{% url 'sk_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.nr_sk }} 
+			{{ i.nr_kk }} 
+			{{ i.judul }} 
+			{{ i.tanggal }} 
+			{{ i.catatan }} 
+			{{ i.pegawai }} 
+			{{ i.status|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

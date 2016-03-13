@@ -1,0 +1,20 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'mkul_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Matakuliah detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'mkul_edit' pk=mk.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ mk.idx }}</p><br>
+		<p>{{ mk.kode }}</p> 
+		<h1>{{ mk.nama }}</h1> 
+		<p>{{ mk.t }}</p> 
+		<p>{{ mk.p }}</p> 
+		<p>{{ mk.k }}</p> 
+		<p>{{ mk.pts }}</p> 
+		<p>{{ mk.semester|linebreaks }}</p>
+	</div>
+{% endblock %}

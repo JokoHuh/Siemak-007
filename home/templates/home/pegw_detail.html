@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pegw_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Pegawai detail...</b><br>
+	<div class="post">
+		{{ pgw.idx }}<br>
+		<a class="btn btn-default" href="{% url 'pegw_edit' pk=pg.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+		<h1>{{ pg.nama }}</h1>
+		<p>{{ pg.nip }}</p>
+		<p>{{ pg.nidn }}</p>
+		<p>{{ pg.tanggal }}</p>
+		<p>{{ pg.na_titel }}</p> 
+		<p>{{ pg.na_titel_setara }}</p> 
+		<p>{{ pg.catatan }}</p>
+		<p>{{ pg.golpgw }}</p> 
+		<p>{{ pg.grppgw }}</p> 
+		<p>{{ pg.japgw }}</p> 
+		<p>{{ pg.pts }}</p> 
+		<p>{{ pg.status|linebreaks }}</p>
+	</div>
+{% endblock %}
+

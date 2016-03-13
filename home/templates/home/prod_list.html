@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+<a href="{% url 'prod_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+<b>Prodi lists...</b></br>
+<div class="post">
+	{% for i in pr %}
+		<a href="{% url 'prod_detail' pk=i.idx %}">{{ i.idx }}</a>
+		{{ i.nama }}, {{ i.pts|linebreaks }}
+	{% endfor %}
+</div>
+{% endblock %}
+

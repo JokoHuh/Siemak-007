@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'maha_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Mahasiswa lists...</b></br>
+	<div class="post">
+		{% for i in ma %}
+			<a href="{% url 'maha_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.nim }} {{ i.nama }} {{ i.angkatan }} {{ i.sks }} {{ i.catatan }} {{ i.konversi }} {{ i.pts }} {{ i.prodi }} {{ i.status|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

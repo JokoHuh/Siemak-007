@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pbay_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Pembayaran detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'pbay_edit' pk=pb.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		<p>{{ tg.idx }}<br>
+		<p>{{ tg.tanggal }}</p> 
+		<p>{{ tg.jenis }}</p> 
+		<h1>{{ tg.nr_validasi }}</h1> 
+		<p>{{ tg.mahasiswa|linebreaks }}</p>
+	</div>
+{% endblock %}

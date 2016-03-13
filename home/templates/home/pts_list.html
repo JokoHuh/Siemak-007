@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+<a href="{% url 'pts_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+<b>PTS lists...</b></br>
+<div class="post">
+    {% for i in ps %}
+		<a href="{% url 'pts_detail' pk=i.idx %}">{{ i.idx }}</a>
+		{{ i.nama }}, {{ i.namapanjang }}, {{ i.catatan }}, {{ i.pt_id|linebreaks }} 
+    {% endfor %}
+</div>
+{% endblock %}
+

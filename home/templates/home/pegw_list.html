@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'pegw_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Pegawai lists...</b></br>
+	<div class="post">
+		{% for i in pg %}
+			<a href="{% url 'pegw_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.nama }},  
+			{{ i.nip }}, 
+			{{ i.nidn }}, 
+			{{ i.tanggal }}, 
+			{{ i.na_titel }}, 
+			{{ i.na_titel_setara }}, 
+			{{ i.catatan }}, 
+			{{ i.golpgw }}, 
+			{{ i.grppgw }}, 
+			{{ i.japgw }}, 
+			{{ i.pts }}, 
+			{{ i.status|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+

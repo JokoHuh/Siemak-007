@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>SiEmak</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    </head>
+    <body>
+	<div id="page-wrap">
+        <div class="page-header">
+
+			{% if user.is_authenticated %}
+				{% block plus %}                    				
+				{% endblock %}
+			{% endif %}
+
+			<h1><a href="/">SISTEM AKADEMI</a></h1>
+			<h2>
+			YPDKDW - Kampus Kenanga<br>
+			Jl.Kenanga No.3 - 16C - Kota Metro - Lampung		
+			</h2>	
+			 
+			{% if user.username %}  
+				<login class="login">
+				Silahkan <a href="/logout">logout</a> ... {{ user.username }}
+				</login>
+			{% else %}  
+				<login class="login">
+				Silahkan <a href="/login">login</a> 
+				</login> 
+			{% endif %} 
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+	</div>
+    </body>
+</html>

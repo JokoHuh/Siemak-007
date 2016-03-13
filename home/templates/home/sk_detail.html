@@ -1,0 +1,20 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'sk_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>SK detail...</b><br>
+	<div class="post">
+		<a class="btn btn-default" href="{% url 'sk_edit' pk=sk.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+		{{ sk.idx }}<br>
+		{{ sk.nr_sk }}<br> 
+		{{ sk.nr_kk }}<br> 
+		{{ sk.judul }}<br> 
+		{{ sk.tanggal }}<br> 
+		{{ sk.catatan }}<br> 
+		{{ sk.pegawai }}<br> 
+		{{ sk.status|linebreaks }}
+	</div>
+{% endblock %}

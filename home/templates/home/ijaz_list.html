@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block plus %}
+	<a href="{% url 'ijaz_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}
+
+{% block content %}
+	<b>Ijazah lists...</b></br>
+	<div class="post">
+		{% for i in ij %}
+			<a href="{% url 'ijaz_detail' pk=i.idx %}">{{ i.idx }}</a>
+			{{ i.nomor }} {{ i.nr_seri }} {{ i.catatan }} {{ i.status }} {{ i.mahasiswa|linebreaks }}
+		{% endfor %}
+	</div>
+{% endblock %}
+
